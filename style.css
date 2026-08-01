@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(5, 39, 74);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo h1 span {
+    color: rgb(239, 181, 34);
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 1.5rem;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: rgb(239, 181, 34);
+}
+
+/* Banner Hero */
+.hero {
+    text-align: center;
+    padding: 11rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fond.png') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: rgb(239, 181, 34);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(185, 144, 39);
+}
+
+/* Section Boutique */
+.shop-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.shop-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Carte Produit */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.card-price {
+    font-size: 1.1rem;
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn-mp {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-mp:hover {
+    background-color: #3498db;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgb(5, 39, 74);
+    color: #fff;
+    margin-top: 3rem;
+}
+
+a{
+    color: #fff;
+}
+
+/* ===========================
+   RESPONSIVE TABLETTE
+=========================== */
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .hero {
+        padding: 11rem 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+}
+
+
+/* ===========================
+   RESPONSIVE TÉLÉPHONE
+=========================== */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar nav ul li {
+        margin-left: 0;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 160px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Boutique */
+    .shop-container {
+        margin: 2rem auto;
+        padding: 0 15px;
+    }
+
+    .shop-container h2 {
+        font-size: 1.7rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Carte */
+    .card img {
+        height: 250px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-price {
+        font-size: 1rem;
+    }
+
+    .btn-mp {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* ===========================
+   PETITS SMARTPHONES
+=========================== */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 150px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .navbar .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .shop-container h2 {
+        font-size: 1.5rem;
+    }
+
+}
