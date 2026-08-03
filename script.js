@@ -5,6 +5,12 @@ const ebooks = [
         title: "Réussir ses études - Education",
         price: "2 500 Ar",
         image: "n1.png"
+    },
+    {
+        id: 2,
+        title: "Entreprendre et Réussir - Business",
+        price: "3 500 Ar",
+        image: "n2.png"
     }
 ];
 
