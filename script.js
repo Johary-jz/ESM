@@ -11,6 +11,12 @@ const ebooks = [
         title: "Entreprendre et Réussir - Business",
         price: "3 500 Ar",
         image: "n2.png"
+    },
+    {
+        id: 3,
+        title: "L'informatique de A à Z - Informatique",
+        price: "3 500 Ar",
+        image: "n3.png"
     }
 ];
 
